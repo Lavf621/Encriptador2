@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <script type="text/javascript">
+
+        function encriptar(mensaje2){
+            let mensaje=document.getElementById("texto-normal").value;
+            var mensaje2 = [];
+            mensaje2 = mensaje.split('');
+            var contador = 0;
+            while (contador<=(mensaje2.length-1)){
+                if(mensaje2[contador] =='e'){
+                    mensaje2[contador] ='enter';
+                }
+                if(mensaje2[contador] =='i'){
+                    mensaje2[contador] ='imes';   
+                }
+                if(mensaje2[contador] =='a'){
+                    mensaje2[contador] ='ai';   
+                }
+    
+                if(mensaje2[contador] =='o'){
+                    mensaje2[contador] ='ober';  
+                }
+                if(mensaje2[contador] =='u'){
+                    mensaje2[contador] ='ufat';          
+                }
+                contador++
+            }
+            var resultado = mensaje2.toString();
+            resultado = resultado.replace(/,/g, "");
+            console.log(resultado);
+            document.getElementById('encripcion').innerHTML = resultado;
+            return mensaje2;
+        }
+
+        function desencriptar(mensaje3){
+            let mensaje=document.getElementById("texto-normal").value;
+            var mensaje3 = [];
+            mensaje3 = mensaje.split('');
+            var contador = 0;
+            while (contador<=(mensaje3.length-1)){
+             if(mensaje3[contador]=='e' && mensaje3[contador+1]=='n' && mensaje3[contador+2]=='t' && mensaje3[contador+3]=='e' && mensaje3[contador+4]=='r'){
+
+                mensaje3[contador]='e';
+                mensaje3[contador+1]='';
+                mensaje3[contador+2]='';
+                mensaje3[contador+3]='';
+                mensaje3[contador+4]=''; 
+             }
+             if(mensaje3[contador]=='i' && mensaje3[contador+1]=='m' && mensaje3[contador+2]=='e' && mensaje3[contador+3]=='s'){
+
+                mensaje3[contador]='i';
+                mensaje3[contador+1]='';
+                mensaje3[contador+2]='';
+                mensaje3[contador+3]='';
+            }
+            if(mensaje3[contador]=='a' && mensaje3[contador+1]=='i'){
+
+                mensaje3[contador]='a';
+                mensaje3[contador+1]='';
+            }
+            if(mensaje3[contador]=='o' && mensaje3[contador+1]=='b' && mensaje3[contador+2]=='e' && mensaje3[contador+3]=='r'){
+
+                mensaje3[contador]='o';
+                mensaje3[contador+1]='';
+                mensaje3[contador+2]='';
+                mensaje3[contador+3]='';
+            }
+            if(mensaje3[contador]=='u' && mensaje3[contador+1]=='f' && mensaje3[contador+2]=='a' && mensaje3[contador+3]=='t'){
+
+                mensaje3[contador]='u';
+                mensaje3[contador+1]='';
+                mensaje3[contador+2]='';
+                mensaje3[contador+3]='';      
+            }
+             contador++
+             console.log(mensaje3);
+            }
+            var resultado = mensaje3.toString();
+            resultado = resultado.replace(/,/g, "");
+            console.log(resultado);
+            document.getElementById('desencripcion').innerHTML = resultado;
+            return mensaje3;
+        }
+
+        function copiarAlPortaPapeles(){
+            var codigoACopiar = document.getElementById('encripcion');
+            var seleccion = document.createRange();
+            seleccion.selectNodeContents(codigoACopiar);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(seleccion);
+            var res = document.execCommand('copy');
+            window.getSelection().removeRange(seleccion);
+        }
+
+        function copiarAlPortaPapeles2(){
+            var codigoACopiar = document.getElementById('desencripcion');
+            var seleccion = document.createRange();
+            seleccion.selectNodeContents(codigoACopiar);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(seleccion);
+            var res = document.execCommand('copy');
+            window.getSelection().removeRange(seleccion);
+        }
+
+    </script>
+
+<html class="pagina">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="Style-Encriptador.css">
+    </head>
+
+   <body class="fondo">
+
+        <header>
+
+            <div class="logo">
+                <img src="imagenes/Vector.jpg" alt="logo alura">
+            </div>
+
+        </header>
+        
+                <div class="texto">
+                    <input type="text" name="" id="texto-normal" required placeholder="Ingrese el texto aqui">
+                </div>
+        
+                <div class="advertencia">
+                    <img src="imagenes/exclamasion-circulo.jpg" alt="">
+                    <label>Solo letras minúsculas y sin acentos</label>
+        
+                </div>
+        
+                <div class="rectangulo">
+        
+                    <textarea  id="rectangulo"></textarea>
+        
+                </div>
+        
+                <div class="munheco" id="imagen-munheco">
+        
+                    <img src="imagenes/Muñeco.jpg" alt="munheco">
+                </div>
+        
+                <div class="ningun-mensaje" id="texto2">
+                    <label>Ningún mensaje fue encontrado</label>
+                </div>
+        
+                <div class="ingrese-texto" id="texto1">
+                    <label>Ingresa el texto que desees encriptar o desencriptar.</label>
+                </div>
+        
+                <div class="boton-encriptar2">
+                    <button onclick="
+                    encriptar()
+                    document.getElementById('texto1').style.display = 'none';
+                    document.getElementById('texto2').style.display = 'none';
+                    document.getElementById('imagen-munheco').style.display = 'none';
+                    document.getElementById('mensajeEncriptado').style.display = 'block'; 
+                    document.getElementById('mensajeDesencriptado').style.display = 'none'; 
+                    document.getElementById('texto-normal').value='';
+                    ">Encriptar</button>
+                </div>
+        
+                <div class="mensaje-encriptado" id="mensajeEncriptado">
+                    <p id="encripcion"></p>
+                </div>
+        
+                <div class="boton-desencriptar2">
+        
+                    <button onclick="
+                    desencriptar()
+                    document.getElementById('texto1').style.display = 'none'; 
+                    document.getElementById('texto2').style.display = 'none';
+                    document.getElementById('imagen-munheco').style.display = 'none';
+                    document.getElementById('mensajeEncriptado').style.display = 'none';
+                    document.getElementById('mensajeDesencriptado').style.display = 'block';
+                    document.getElementById('texto-normal').value=''; 
+                    ">Desencriptar</button>
+        
+                </div>
+        
+                <div class="mensaje-desencriptado" id="mensajeDesencriptado">
+                    <p id="desencripcion"></p>
+                </div>
+        
+                <div class="boton-copiar">
+        
+                    <button onclick="
+                        copiarAlPortaPapeles()
+                        copiarAlPortaPapeles2()
+                        ">
+                        Copiar
+                    </button>
+        
+                </div>
+    </body>
+
+    <footer class="piedepagina">
+
+        <p>Luis Vela</p>
+        <p>Guatemala</p>
+        <p>Email: lvelaf@hotmail.com</p>
+
+    </footer>
+
+</html>

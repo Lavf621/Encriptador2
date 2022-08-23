@@ -1,0 +1,189 @@
+
+.fondo{
+    background: #F3F5FC;
+}
+
+.logo{
+    position: fixed;
+   top: 40px;
+   left: 40px; 
+   bottom: 936px;
+   right: 1280;
+}
+
+.texto{
+    position: fixed;
+   top: 168px;
+   left: 240px; 
+   bottom: 808px;
+   right: 623px;
+}
+
+.texto input {
+    border: none;
+    color: #0A3871;
+    font-size: 32px;
+    line-height: 48PX;
+    align:left;
+    vertical-align: top;
+    width: 577px;
+    height: 48px;
+}
+
+.advertencia{
+    position: fixed;
+    top: 851px;
+    left: 240px;
+    bottom: 155px;
+    right: 971px;
+    background: #F3F5FC;
+}
+
+.rectangulo textarea{
+    position: fixed;
+    top: 40px;
+    left: 1000px;
+    bottom: 40px;
+    right: 25px;
+    border-radius: 32px;
+    color: white;
+    width: 415px;
+    height: 944px;
+}
+
+.munheco img{
+    position: fixed;
+    top: 283px;
+    left: 1032px;
+    bottom: 437px;
+    right: 72px;
+}
+
+.ningun-mensaje label{
+    position: fixed;
+    top: 619px;
+    left: 1032px;
+    bottom: 347px;
+    right: 72px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    width: 336px;
+    height: 58px;
+    color: #343a40;
+    COLOR:solid;
+}
+
+.ingrese-texto label{
+    position: fixed;
+    top: 693px;
+    left: 1032px;
+    bottom: 283px;
+    right: 72px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: 336px;
+    height: 58px;
+    color: #495057;
+    COLOR:solid;
+}
+
+
+.piedepagina{
+    color: black;
+    font-size: 30px;
+    position:fixed;
+    top: 1050px;
+    left: 40px;
+}
+
+.mensaje-encriptado p{
+    position: fixed;
+    top: 250px;
+    left: 1032px;
+    bottom: 347px;
+    right: 72px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    width: 336px;
+    height: 558px;
+    color: #343a40;
+    COLOR:solid;
+    vertical-align: top;
+}
+
+.boton-encriptar2 button{
+    position: fixed;
+    top: 885px;
+    left: 240px;
+    bottom: 72px;
+    right: 872px;
+    text-align: center;
+    font-size: 16px;
+    width: 328px;
+    height: 67px;
+    color: white;
+    vertical-align: top;
+    background: #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.boton-desencriptar2 button{
+    position: fixed;
+    top: 885px;
+    left: 625px;
+    bottom: 72px;
+    right: 800px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: 328px;
+    height: 67px;
+    color: #495057;
+    COLOR:solid;
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.mensaje-desencriptado p{
+    position: fixed;
+    top: 250px;
+    left: 1032px;
+    bottom: 347px;
+    right: 72px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    width: 336px;
+    height: 58px;
+    color: #343a40;
+    COLOR:solid;
+}
+
+
+.boton-copiar button{
+
+    position: fixed;
+    top: 1000px;
+    left: 1050px;
+    bottom: 72px;
+    right: 800px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    width: 328px;
+    height: 67px;
+    color: white;
+    COLOR:solid;
+    cursor: pointer;
+    border-radius: 24px;
+    background: rgb(253, 2, 2);
+
+}
+
+
+
+
